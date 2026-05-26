@@ -53,7 +53,6 @@ class main_window(QMainWindow, Ui_MainWindow):
 
 
 if __name__ == '__main__':
-    # WINDOWS TASKBAR ICON FIX
     # Assign a unique App User Model ID so Windows links the process to your icon
     try:
         myappid = "mycompany.afmprocessingapp.template_matching.1" 

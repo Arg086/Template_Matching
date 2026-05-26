@@ -26,7 +26,7 @@ class DriftPlotter:
         """Plots X and Y drift over time for both absolute and relative metrics."""
         fig, axs = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
         
-        # 1. Absolute Drift Plot
+        # Absolute Drift Plot
         axs[0].plot(self.frames, self.drift_abs[:, 0], 'o-', label='X Drift (Abs)', color='royalblue')
         axs[0].plot(self.frames, self.drift_abs[:, 1], 'o-', label='Y Drift (Abs)', color='darkorange')
         axs[0].set_ylabel('Absolute Drift ($\mu m$)')
@@ -34,7 +34,7 @@ class DriftPlotter:
         axs[0].grid(True, linestyle='--', alpha=0.6)
         axs[0].legend()
 
-        # 2. Relative Drift Plot
+        # Relative Drift Plot
         axs[1].plot(self.frames, self.drift_rel[:, 0], 's--', label='X Drift (Rel)', color='cornflowerblue')
         axs[1].plot(self.frames, self.drift_rel[:, 1], 's--', label='Y Drift (Rel)', color='orange')
         axs[1].set_xlabel('Comparison File Index (Time/Frames)')
@@ -61,7 +61,7 @@ class DriftPlotter:
         scatter = plt.scatter(self.drift_abs[:, 0], self.drift_abs[:, 1], 
                               c=self.frames, cmap='viridis', s=50, edgecolors='k', zorder=3)
         
-        # Mark start and end points
+        # Marks start and end points
         plt.scatter(self.drift_abs[0, 0], self.drift_abs[0, 1], color='green', marker='^', s=150, label='Start', zorder=4)
         plt.scatter(self.drift_abs[-1, 0], self.drift_abs[-1, 1], color='red', marker='v', s=150, label='End', zorder=4)
         

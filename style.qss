@@ -1,0 +1,192 @@
+/* Base Application Layout */
+QMainWindow {
+    background-color: #121214;
+}
+
+QWidget {
+    color: #e0e0e6;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+}
+
+/* Custom Component Frames styling */
+QFrame#parameters_frm, QFrame#imagelog_frm, QFrame#frame_6 {
+    background-color: #1d1d22;
+    border: 1px solid #2d2d35;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+/* Nested interior frames lose default border lines to avoid busy box-in-box nesting */
+QFrame#fileselect_frm, QFrame#nidparam_frm, QFrame#pngparam_frm, QFrame#imgprocess_frm {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+
+/* Headings & Section Labels */
+QLabel {
+    color: #b0b0bc;
+}
+QLabel#titleimg_lbl, QLabel#titlenidparam_lbl, QLabel#titleimgproc_lbl, QLabel#logtitle_lbl {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Push Buttons styling */
+QPushButton {
+    background-color: #2a2a32;
+    color: #ffffff;
+    border: 1px solid #3a3a45;
+    border-radius: 4px;
+    padding: 6px 12px;
+    min-height: 18px;
+}
+
+QPushButton:hover {
+    background-color: #353540;
+    border-color: #4a4a5a;
+}
+
+QPushButton:pressed {
+    background-color: #202026;
+}
+
+/* Primary Execution Buttons (Action-oriented Accent color highlight) */
+QPushButton#calculationrun_btn, QPushButton#filterupdate_btn {
+    background-color: #005a9e;
+    border: 1px solid #007acc;
+}
+
+QPushButton#calculationrun_btn:hover, QPushButton#filterupdate_btn:hover {
+    background-color: #007acc;
+    border-color: #24a0ed;
+}
+
+/* Input Fields (Line Edits & ComboBox dropdown selectors) */
+QLineEdit, QComboBox {
+    background-color: #25252b;
+    border: 1px solid #3a3a45;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #ffffff;
+}
+
+QLineEdit:focus, QComboBox:focus {
+    border: 1px solid #007acc;
+    background-color: #2a2a32;
+}
+
+/* ComboBox Dropdown Specifics */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 0px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #1d1d22;
+    border: 1px solid #3a3a45;
+    background-color: #005a9e;
+    color: #ffffff;
+}
+
+/* Checkboxes */
+QCheckBox {
+    spacing: 6px;
+}
+
+QCheckBox::indicator {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #3a3a45;
+    border-radius: 3px;
+    background-color: #25252b;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #007acc;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #005a9e;
+    border-color: #007acc;
+}
+
+/* Text Terminal Logs Window */
+QTextBrowser#log_txtbrs {
+    background-color: #0f0f11;
+    border: 1px solid #2a2a32;
+    border-radius: 4px;
+    font-family: "Consolas", "Courier New", monospace;
+    color: #a8ffb2; /* Subtle terminal green for readable logs output */
+}
+
+/* Status Bar & Menu bars */
+QStatusBar, QMenuBar {
+    background-color: #121214;
+    color: #8a8a95;
+}
+
+QMenuBar::item:selected {
+    background-color: #2a2a32;
+    color: #ffffff;
+}
+
+
+/* ==========================================================================
+   QTabWidget Styling (Dark Mode Fix)
+   ========================================================================== */
+
+/* The background container behind the tabs */
+QTabWidget::pane {
+    border: 1px solid #2d2d35;
+    background-color: #1d1d22;
+    margin-top: -1px; /* Overlaps nicely with the tab bar border */
+}
+
+/* The tab bar background layout container */
+QTabBar {
+    background-color: transparent;
+}
+
+/* Style for all individual unselected tabs */
+QTabBar::tab {
+    background-color: #25252b;
+    color: #b0b0bc; /* Soft gray for unselected text */
+    border: 1px solid #2d2d35;
+    border-bottom-color: transparent; /* Seamless blend with the pane below */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 6px 16px;
+    margin-right: 2px;
+}
+
+/* When hovering over an inactive tab */
+QTabBar::tab:hover {
+    background-color: #2a2a32;
+    color: #ffffff;
+}
+
+/* Style for the currently active/selected tab */
+QTabBar::tab:selected {
+    background-color: #1d1d22; /* Matches the pane background */
+    color: #ffffff;            /* Crisp white text for clarity */
+    border-color: #2d2d35;
+    border-bottom-color: #1d1d22; /* Blends straight down into the pane content */
+    font-weight: bold;
+}
+
+
+/* Primary Execution Buttons (Action-oriented Accent color highlight) */
+QPushButton#calculationrun_btn, QPushButton#filterupdate_btn, QPushButton#playgif_btn {
+    background-color: #005a9e;
+    border: 1px solid #007acc;
+}
+
+QPushButton#calculationrun_btn:hover, QPushButton#filterupdate_btn:hover, QPushButton#playgif_btn:hover {
+    background-color: #007acc;
+    border-color: #24a0ed;
+}

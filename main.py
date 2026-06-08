@@ -55,7 +55,7 @@ class main_window(QMainWindow, Ui_MainWindow):
 if __name__ == '__main__':
     # Assign a unique App User Model ID so Windows links the process to your icon
     try:
-        myappid = "mycompany.afmprocessingapp.template_matching.1" 
+        myappid = "nsf.afmprocessingapp.template_matching.1" 
         ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
     except Exception as e:
         print(f"Could not set AppUserModelID: {e}")
